@@ -1,6 +1,6 @@
 <?php
 include_once "conexion.php"; // Incluye el archivo de conexión a la base de datos
-$sentencia = $conexion->query("SELECT idpersona, documento, nombre, apellido, direccion, celular FROM persona"); // Realiza una consulta para obtener todos los registros de la tabla "persona"
+$sentencia = $db->query("SELECT idpersona, documento, nombre, apellido, direccion, celular FROM persona"); // Realiza una consulta para obtener todos los registros de la tabla "persona"
 $personas = $sentencia->fetchAll(PDO::FETCH_OBJ); // Obtiene todos los registros de la tabla como un arreglo de objetos
 ?>
 
